@@ -16,3 +16,12 @@ body {
 .full-width {
   width: 100%;
 }
+
+.half-width {
+  width: 50%;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}

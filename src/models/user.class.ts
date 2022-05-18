@@ -7,11 +7,22 @@ export class User {
   city: string;
 
   constructor(obj?: any) {
-    this.firstName = obj.fristName ? obj.firstName : '';
-    this.lastName = obj.lastName ? obj.lastName : '';
-    this.brithDate = obj.brithDate ? obj.brithDate : '';
-    this.street = obj.street ? obj.street : '';
-    this.zipCode = obj.zipCode ? obj.zipCode : '';
-    this.city = obj.city ? obj.city : '';
+    this.firstName = obj ? obj.firstName : '';
+    this.lastName = obj ? obj.lastName : '';
+    this.brithDate = obj ? obj.brithDate : '';
+    this.street = obj ? obj.street : '';
+    this.zipCode = obj ? obj.zipCode : '';
+    this.city = obj ? obj.city : '';
+  }
+
+  public toJson() {
+    return {
+      firstName: this.firstName,
+      lastName: this.lastName,
+      brithDate: this.brithDate,
+      street: this.street,
+      zipCode: this.zipCode,
+      city: this.city,
+    };
   }
 }
