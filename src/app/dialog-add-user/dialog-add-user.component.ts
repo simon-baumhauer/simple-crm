@@ -10,6 +10,7 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 export class DialogAddUserComponent implements OnInit {
   user = new User();
   birthDate: Date;
+  loading = false;
 
   constructor(private firestore: AngularFirestore) {}
 
@@ -18,10 +19,12 @@ export class DialogAddUserComponent implements OnInit {
   saveUser() {
     this.user.brithDate = this.birthDate.getTime();
     console.log('Current user is', this.user);
+    this.loading = true;
     this.firestore
       .collection('users')
       .add(this.user.toJson())
       .then((results: any) => {
+        this.loading = false;
         console.log('Adding user finished', results);
       });
   }
