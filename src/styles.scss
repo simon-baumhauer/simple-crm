@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 html,
 body {
@@ -39,5 +40,26 @@ body {
     right: -24px;
     top: -24px;
     width: 111.5%;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+@media only screen and (max-width: 570px) {
+  .dialog-container {
+    mat-form-field {
+      width: 100%;
+    }
+
+    .space-between {
+      flex-direction: column;
+    }
   }
 }

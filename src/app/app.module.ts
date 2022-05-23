@@ -26,6 +26,7 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { DialogAddedAddressComponent } from './dialog-added-address/dialog-added-address.component';
 import { DialogEditUserComponent } from './dialog-edit-user/dialog-edit-user.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { DialogEditUserComponent } from './dialog-edit-user/dialog-edit-user.com
     MatProgressBarModule,
     MatCardModule,
     MatMenuModule,
+    FlexLayoutModule,
     AngularFireModule.initializeApp(environment.firebase),
   ],
   providers: [],
