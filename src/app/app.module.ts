@@ -27,6 +27,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { DialogAddedAddressComponent } from './dialog-added-address/dialog-added-address.component';
 import { DialogEditUserComponent } from './dialog-edit-user/dialog-edit-user.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { OrdersComponent } from './orders/orders.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     UserDetailComponent,
     DialogAddedAddressComponent,
     DialogEditUserComponent,
+    OrdersComponent,
   ],
   imports: [
     BrowserModule,
