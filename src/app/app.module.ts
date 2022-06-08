@@ -28,6 +28,7 @@ import { DialogAddedAddressComponent } from './dialog-added-address/dialog-added
 import { DialogEditUserComponent } from './dialog-edit-user/dialog-edit-user.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { OrdersComponent } from './orders/orders.component';
+import { DialogAddOrderComponent } from './dialog-add-order/dialog-add-order.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { OrdersComponent } from './orders/orders.component';
     DialogAddedAddressComponent,
     DialogEditUserComponent,
     OrdersComponent,
+    DialogAddOrderComponent,
   ],
   imports: [
     BrowserModule,

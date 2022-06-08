@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { DialogAddUserComponent } from '../dialog-add-user/dialog-add-user.component';
+import { DialogAddOrderComponent } from '../dialog-add-order/dialog-add-order.component';
 
 @Component({
   selector: 'app-orders',
@@ -13,6 +13,6 @@ export class OrdersComponent implements OnInit {
   ngOnInit(): void {}
 
   openDialog() {
-    this.dialog.open(DialogAddUserComponent);
+    this.dialog.open(DialogAddOrderComponent);
   }
 }
