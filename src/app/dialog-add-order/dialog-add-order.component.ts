@@ -11,9 +11,6 @@ import { Order } from 'src/models/order.class';
 export class DialogAddOrderComponent implements OnInit {
   order = new Order();
   loading = false;
-  handschuhe = [];
-  masken = [];
-  desinfektionsmittel = [];
 
   constructor(
     public dialogRef: MatDialogRef<DialogAddOrderComponent>,
@@ -36,6 +33,5 @@ export class DialogAddOrderComponent implements OnInit {
 
   selectProduct(produkt, array) {
     array.push(produkt);
-    console.log(array);
   }
 }

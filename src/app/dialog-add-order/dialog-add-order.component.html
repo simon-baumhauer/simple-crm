@@ -1,20 +1,29 @@
 <div class="dialog-container">
   <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
   <h1 mat-dialog-title>Add Order</h1>
-  <mat-card
-    class="products"
-    (click)="selectProduct('Handschuhe', this.handschuhe)"
-    >Gloves</mat-card
-  >
-  <mat-card class="products" (click)="selectProduct('Masken', this.masken)"
-    >Masken</mat-card
-  >
-  <mat-card
-    class="products"
-    (click)="selectProduct('Desinfektionmittel', this.desinfektionsmittel)"
-  >
-    Desinfektionmittel</mat-card
-  >
+  <div class="grid">
+    <mat-card
+      class="products"
+      (click)="selectProduct('Handschuhe', this.order.handschuhe)"
+      >Gloves</mat-card
+    >
+    <div>{{ this.order.handschuhe.length }}</div>
+    <mat-card
+      class="products"
+      (click)="selectProduct('Masken', this.order.masken)"
+      >Masken</mat-card
+    >
+    <div>{{ this.order.masken.length }}</div>
+    <mat-card
+      class="products"
+      (click)="
+        selectProduct('Desinfektionmittel', this.order.desinfektionsmittel)
+      "
+    >
+      Desinfektionmittel
+    </mat-card>
+    <div>{{ this.order.desinfektionsmittel.length }}</div>
+  </div>
   <div mat-dialog-actions>
     <button mat-button (click)="dialogRef.close()">Cancel</button>
     <button mat-button cdkFocusInitial (click)="saveOrder()">Save</button>

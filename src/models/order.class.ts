@@ -1,19 +1,19 @@
 export class Order {
-  Handschuhe: string;
-  Desinfektionsmittel: string;
-  Masken: string;
+  handschuhe: Array<any>;
+  desinfektionsmittel: Array<any>;
+  masken: Array<any>;
 
   constructor(obj?: any) {
-    this.Handschuhe = obj ? obj.Handschuhe : '';
-    this.Desinfektionsmittel = obj ? obj.Desinfektionsmittel : '';
-    this.Masken = obj ? obj.Masken : '';
+    this.handschuhe = obj ? obj.Handschuhe : [];
+    this.desinfektionsmittel = obj ? obj.desinfektionsmittel : [];
+    this.masken = obj ? obj.masken : [];
   }
 
   public toJson() {
     return {
-      Handschuhe: this.Handschuhe,
-      Desinfektionsmittel: this.Desinfektionsmittel,
-      Masken: this.Masken,
+      handschuhe: this.handschuhe,
+      desinfektionsmittel: this.desinfektionsmittel,
+      masken: this.masken,
     };
   }
 }
