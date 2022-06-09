@@ -7,13 +7,15 @@
       (click)="selectProduct('Handschuhe', this.order.handschuhe)"
       >Gloves</mat-card
     >
-    <div>{{ this.order.handschuhe.length }}</div>
+    <mat-card class="product-amount">{{
+      this.order.handschuhe.length
+    }}</mat-card>
     <mat-card
       class="products"
       (click)="selectProduct('Masken', this.order.masken)"
       >Masken</mat-card
     >
-    <div>{{ this.order.masken.length }}</div>
+    <mat-card class="product-amount">{{ this.order.masken.length }}</mat-card>
     <mat-card
       class="products"
       (click)="
@@ -22,7 +24,9 @@
     >
       Desinfektionmittel
     </mat-card>
-    <div>{{ this.order.desinfektionsmittel.length }}</div>
+    <mat-card class="product-amount">{{
+      this.order.desinfektionsmittel.length
+    }}</mat-card>
   </div>
   <div mat-dialog-actions>
     <button mat-button (click)="dialogRef.close()">Cancel</button>
