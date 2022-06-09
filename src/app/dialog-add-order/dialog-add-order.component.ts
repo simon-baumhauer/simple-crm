@@ -31,7 +31,10 @@ export class DialogAddOrderComponent implements OnInit {
       });
   }
 
-  selectProduct(produkt, array) {
+  selectProduct(produkt, array, summ) {
+    let finalSum;
     array.push(produkt);
+    finalSum = finalSum + summ;
+    console.log(finalSum);
   }
 }
