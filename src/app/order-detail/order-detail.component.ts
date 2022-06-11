@@ -34,4 +34,8 @@ export class OrderDetailComponent implements OnInit {
         console.log('Retrieved order', this.order);
       });
   }
+
+  cancelOrder() {
+    this.firestore.collection('orders').doc(this.orderId).delete();
+  }
 }

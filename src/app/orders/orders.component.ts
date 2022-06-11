@@ -27,7 +27,6 @@ export class OrdersComponent implements OnInit {
 
   openDialog() {
     this.dialog.open(DialogAddOrderComponent);
-    console.log();
   }
 
   getAllUsers() {
