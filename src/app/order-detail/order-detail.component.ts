@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { ActivatedRoute } from '@angular/router';
 import { Order } from 'src/models/order.class';
 
 @Component({
@@ -10,10 +11,17 @@ import { Order } from 'src/models/order.class';
 export class OrderDetailComponent implements OnInit {
   orderId = '';
   order: Order = new Order();
-  constructor(private firestore: AngularFirestore) {}
+  constructor(
+    private firestore: AngularFirestore,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
-    this.getOrder();
+    this.route.paramMap.subscribe((paramMap) => {
+      this.orderId = paramMap.get('id');
+      console.log('GOT ID', this.orderId);
+      this.getOrder();
+    });
   }
 
   getOrder() {

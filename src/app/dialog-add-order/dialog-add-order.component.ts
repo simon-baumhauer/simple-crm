@@ -31,6 +31,11 @@ export class DialogAddOrderComponent implements OnInit {
       });
   }
 
+  deleteOrder() {
+    this.loading = true;
+    this.firestore.collection('orders').doc('').delete();
+  }
+
   selectProduct(produkt, array, summ) {
     let finalSum;
     array.push(produkt);

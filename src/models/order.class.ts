@@ -5,7 +5,7 @@ export class Order {
   price: number;
 
   constructor(obj?: any) {
-    this.handschuhe = obj ? obj.Handschuhe : [];
+    this.handschuhe = obj ? obj.handschuhe : [];
     this.desinfektionsmittel = obj ? obj.desinfektionsmittel : [];
     this.masken = obj ? obj.masken : [];
     this.price = obj ? obj.price : '';
