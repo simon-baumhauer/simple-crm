@@ -28,6 +28,9 @@
       this.order.desinfektionsmittel.length
     }}</mat-card>
   </div>
+  <div *ngFor="let user of users">
+    <div>{{ user.firstName }}</div>
+  </div>
   <div mat-dialog-actions>
     <button mat-button (click)="dialogRef.close()">Cancel</button>
     <button mat-button cdkFocusInitial (click)="saveOrder()">Save</button>

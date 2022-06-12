@@ -17,7 +17,16 @@ export class DialogAddOrderComponent implements OnInit {
     private firestore: AngularFirestore
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.firestore
+      .collection('users')
+      .valueChanges({ idField: 'userId' })
+      .subscribe((changes: any) => {
+        this.users = changes;
+      });
+  }
+
+  users: any = [];
 
   saveOrder() {
     this.loading = true;
@@ -28,7 +37,9 @@ export class DialogAddOrderComponent implements OnInit {
         this.loading = false;
         console.log('Adding user finished', results);
         this.dialogRef.close();
+        console.log('User', this.users);
       });
+    console.log('test', this.users[0].firstName);
   }
 
   deleteOrder() {
