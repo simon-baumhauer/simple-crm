@@ -1,4 +1,6 @@
-<mat-card>{{ this.order.handschuhe[0] }}</mat-card>
+<mat-card>{{ this.order.handschuhe.length }}</mat-card>
 <mat-card>{{ this.order.desinfektionsmittel.length }}</mat-card>
 <mat-card>{{ this.order.masken.length }}</mat-card>
-<button (click)="this.cancelOrder()">Cancel Order</button>
+<button (click)="this.cancelOrder()" [routerLink]="['/order/']">
+  Cancel Order
+</button>

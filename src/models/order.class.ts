@@ -17,6 +17,7 @@ export class Order {
     return {
       handschuhe: this.handschuhe,
       desinfektionsmittel: this.desinfektionsmittel,
+      masken: this.masken,
       price: this.price,
       user: this.user,
     };

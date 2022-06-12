@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Order } from 'src/models/order.class';
+import { OrdersComponent } from '../orders/orders.component';
 
 @Component({
   selector: 'app-order-detail',
