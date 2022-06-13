@@ -34,4 +34,6 @@
     {{ user.street }}<br />
     {{ user.zipCode }} {{ user.city }}
   </mat-card-content>
+
+  <button (click)="cancelOrder()" [routerLink]="['/user/']">Delete User</button>
 </mat-card>

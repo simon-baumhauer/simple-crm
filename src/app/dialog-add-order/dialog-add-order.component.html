@@ -29,7 +29,7 @@
     }}</mat-card>
   </div>
   <div *ngFor="let user of users">
-    <div>{{ user.firstName }}</div>
+    <div>{{ user.firstName }} {{ user.lastName }}</div>
   </div>
   <div mat-dialog-actions>
     <button mat-button (click)="dialogRef.close()">Cancel</button>

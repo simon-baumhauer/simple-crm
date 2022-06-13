@@ -50,4 +50,8 @@ export class UserDetailComponent implements OnInit {
     dialog.componentInstance.user = new User(this.user.toJson());
     dialog.componentInstance.userId = this.userId;
   }
+
+  cancelOrder() {
+    this.firestore.collection('users').doc(this.userId).delete();
+  }
 }
