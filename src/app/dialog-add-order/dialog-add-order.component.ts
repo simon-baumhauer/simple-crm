@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { MatDialogRef } from '@angular/material/dialog';
 import { Order } from 'src/models/order.class';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-dialog-add-order',
@@ -11,6 +12,7 @@ import { Order } from 'src/models/order.class';
 export class DialogAddOrderComponent implements OnInit {
   order = new Order();
   loading = false;
+  selectedUser = new FormControl('');
 
   constructor(
     public dialogRef: MatDialogRef<DialogAddOrderComponent>,

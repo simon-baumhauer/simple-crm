@@ -17,7 +17,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
@@ -30,6 +30,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { OrdersComponent } from './orders/orders.component';
 import { DialogAddOrderComponent } from './dialog-add-order/dialog-add-order.component';
 import { OrderDetailComponent } from './order-detail/order-detail.component';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -63,6 +64,8 @@ import { OrderDetailComponent } from './order-detail/order-detail.component';
     MatCardModule,
     MatMenuModule,
     FlexLayoutModule,
+    MatSelectModule,
+    ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
   ],
   providers: [],
