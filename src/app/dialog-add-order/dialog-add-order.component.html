@@ -9,15 +9,21 @@
         >Handschuhe</span
       ></mat-card
     >
-    <mat-card class="product-amount">{{
-      this.order.handschuhe.length
-    }}</mat-card>
+    <mat-card
+      ><span class="product-amount"
+        >{{ this.order.handschuhe.length }} pcs
+      </span></mat-card
+    >
     <mat-card
       class="products"
       (click)="selectProduct('Masken', this.order.masken, 6)"
       ><img src="../assets/img/Masken.webp" alt="" /> <span>Masken</span>
     </mat-card>
-    <mat-card class="product-amount">{{ this.order.masken.length }}</mat-card>
+    <mat-card
+      ><span class="product-amount"
+        >{{ this.order.masken.length }} pcs
+      </span></mat-card
+    >
     <mat-card
       class="products"
       (click)="
@@ -28,9 +34,11 @@
         >Desinfektionmittel</span
       >
     </mat-card>
-    <mat-card class="product-amount">{{
-      this.order.desinfektionsmittel.length
-    }}</mat-card>
+    <mat-card
+      ><span class="product-amount"
+        >{{ this.order.desinfektionsmittel.length }} pcs
+      </span></mat-card
+    >
   </div>
 
   <h4>Basic mat-select</h4>
