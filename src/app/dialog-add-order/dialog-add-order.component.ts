@@ -13,6 +13,7 @@ export class DialogAddOrderComponent implements OnInit {
   order = new Order();
   loading = false;
   selectedUser = new FormControl('');
+  finalSum: number = 0;
 
   constructor(
     public dialogRef: MatDialogRef<DialogAddOrderComponent>,
@@ -32,6 +33,8 @@ export class DialogAddOrderComponent implements OnInit {
 
   saveOrder() {
     this.loading = true;
+    this.order.user = this.selectedUser.value;
+    this.order.price = this.finalSum;
     this.firestore
       .collection('orders')
       .add(this.order.toJson())
@@ -41,7 +44,7 @@ export class DialogAddOrderComponent implements OnInit {
         this.dialogRef.close();
         console.log('User', this.users);
       });
-    console.log('test', this.users[0].firstName);
+    console.log('selected User:', this.selectedUser.value);
   }
 
   deleteOrder() {
@@ -49,10 +52,11 @@ export class DialogAddOrderComponent implements OnInit {
     this.firestore.collection('orders').doc('').delete();
   }
 
-  selectProduct(produkt, array, summ) {
-    let finalSum;
+  selectProduct(produkt, array, sum) {
     array.push(produkt);
-    finalSum = finalSum + summ;
-    console.log(finalSum);
+    this.finalSum = this.finalSum + sum;
+    console.log('finalsumm', this.finalSum);
   }
+
+  //console.log(finalSum);
 }

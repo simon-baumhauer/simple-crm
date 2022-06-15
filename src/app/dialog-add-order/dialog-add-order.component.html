@@ -34,7 +34,7 @@
     <mat-label>User</mat-label>
     <mat-select [formControl]="selectedUser">
       <mat-select-trigger>
-        {{ selectedUser.value ? selectedUser.value[0].selectedUser : "" }}
+        {{ selectedUser.value ? selectedUser.value[0].firstName : "" }}
         <span
           *ngIf="selectedUser.value?.length > 1"
           class="example-additional-selection"

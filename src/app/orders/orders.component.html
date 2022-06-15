@@ -9,9 +9,9 @@
       *ngFor="let order of allOrders"
       [routerLink]="['/order/' + order.customIdName]"
     >
-      <td>Kunde</td>
+      <td>{{ this.order.user }}</td>
       <td>peding</td>
-      <td>amount</td>
+      <td>{{ this.order.price }} CHF</td>
     </tr>
   </table>
 </mat-card>
