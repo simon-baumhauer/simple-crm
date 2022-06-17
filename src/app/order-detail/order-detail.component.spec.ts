@@ -1,4 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { RouterModule } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 import { OrderDetailComponent } from './order-detail.component';
 
@@ -8,9 +12,13 @@ describe('OrderDetailComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OrderDetailComponent ]
-    })
-    .compileComponents();
+      declarations: [OrderDetailComponent],
+      imports: [
+        RouterModule.forRoot([]),
+        AngularFireModule.initializeApp(environment.firebase),
+        AngularFirestoreModule,
+      ],
+    }).compileComponents();
   });
 
   beforeEach(() => {
