@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { MatDialogRef } from '@angular/material/dialog';
+import { RouterModule } from '@angular/router';
 import { DialogAddOrderComponent } from './dialog-add-order.component';
 
 describe('DialogAddOrderComponent', () => {
@@ -8,9 +9,10 @@ describe('DialogAddOrderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DialogAddOrderComponent ]
-    })
-    .compileComponents();
+      imports: [RouterModule.forRoot([]), MatDialogRef],
+      declarations: [DialogAddOrderComponent],
+      providers: [],
+    }).compileComponents();
   });
 
   beforeEach(() => {

@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatDialogRef } from '@angular/material/dialog';
+import { RouterModule } from '@angular/router';
 
 import { DialogAddedAddressComponent } from './dialog-added-address.component';
 
@@ -8,9 +10,9 @@ describe('DialogAddedAddressComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DialogAddedAddressComponent ]
-    })
-    .compileComponents();
+      imports: [RouterModule.forRoot([]), MatDialogRef],
+      declarations: [DialogAddedAddressComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
