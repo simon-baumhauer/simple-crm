@@ -1,6 +1,18 @@
-<mat-card>{{ this.order.handschuhe.length }}</mat-card>
-<mat-card>{{ this.order.desinfektionsmittel.length }}</mat-card>
-<mat-card>{{ this.order.masken.length }}</mat-card>
+<mat-card
+  ><img src="../assets/img/Handschuhe.webp" alt="" />{{
+    this.order.handschuhe.length
+  }}</mat-card
+>
+<mat-card
+  ><img src="../assets/img/Masken.webp" alt="" />{{
+    this.order.desinfektionsmittel.length
+  }}</mat-card
+>
+<mat-card
+  ><img src="../assets/img/Desinfektionsmittel.webp" alt="" />{{
+    this.order.masken.length
+  }}</mat-card
+>
 <button (click)="this.cancelOrder()" [routerLink]="['/order/']">
   Cancel Order
 </button>
