@@ -29,12 +29,10 @@ img {
   border-radius: 5px;
 }
 
-.grid {
-  width: 100%;
-  height: auto;
-  display: grid;
-  grid-template-rows: 33% 33% 33%;
-  grid-template-columns: 80% 20%;
+.total-sum {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
 }
 
 .product-amount {

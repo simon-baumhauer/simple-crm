@@ -1,4 +1,7 @@
-module.exports = {
-  projectId: "3igb6z",
-  // The rest of the Cypress config options go here...
-};
+const { defineConfig } = require("cypress");
+
+module.exports = defineConfig({
+  e2e: {
+    baseUrl: "http://localhost:1234",
+  },
+});

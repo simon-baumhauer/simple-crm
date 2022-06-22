@@ -57,6 +57,4 @@ export class DialogAddOrderComponent implements OnInit {
     this.finalSum = this.finalSum + sum;
     console.log('finalsumm', this.finalSum);
   }
-
-  //console.log(finalSum);
 }
