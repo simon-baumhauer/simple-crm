@@ -23,6 +23,7 @@ export class OrdersComponent implements OnInit {
         console.log('Receive changes from DB', changes);
         this.allOrders = changes;
       });
+    console.log('all Orders:', this.allOrders);
   }
 
   openDialog() {

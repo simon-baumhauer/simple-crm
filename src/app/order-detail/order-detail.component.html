@@ -13,6 +13,10 @@
     this.order.masken.length
   }}</mat-card
 >
+<mat-card>
+  <span>{{ this.order.user }}</span>
+  <span>{{ this.order }}</span>
+</mat-card>
 <button (click)="this.cancelOrder()" [routerLink]="['/order/']">
   Cancel Order
 </button>

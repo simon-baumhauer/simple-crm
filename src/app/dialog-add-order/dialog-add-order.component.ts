@@ -42,7 +42,6 @@ export class DialogAddOrderComponent implements OnInit {
         this.loading = false;
         console.log('Adding user finished', results);
         this.dialogRef.close();
-        console.log('User', this.users);
       });
     console.log('selected User:', this.selectedUser.value);
   }
@@ -55,6 +54,5 @@ export class DialogAddOrderComponent implements OnInit {
   selectProduct(produkt, array, sum) {
     array.push(produkt);
     this.finalSum = this.finalSum + sum;
-    console.log('finalsumm', this.finalSum);
   }
 }

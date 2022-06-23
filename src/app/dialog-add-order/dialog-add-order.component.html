@@ -47,7 +47,7 @@
       </mat-select-trigger>
       <mat-option
         *ngFor="let user of users"
-        [value]="user.firstName + user.lastName"
+        [value]="user.firstName + ' ' + user.lastName"
       >
         {{ user.firstName }} {{ user.lastName }}
       </mat-option>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Order } from 'src/models/order.class';
+import { User } from 'src/models/user.class';
 import { OrdersComponent } from '../orders/orders.component';
 
 @Component({
@@ -12,6 +13,7 @@ import { OrdersComponent } from '../orders/orders.component';
 export class OrderDetailComponent implements OnInit {
   orderId = '';
   order: Order = new Order();
+
   constructor(
     private firestore: AngularFirestore,
     private route: ActivatedRoute
