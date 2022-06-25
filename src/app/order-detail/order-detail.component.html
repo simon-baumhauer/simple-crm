@@ -15,7 +15,9 @@
 >
 <mat-card>
   <span>{{ this.order.user }}</span>
-  <span>{{ this.order }}</span>
+  <span>
+    Total amount: <B>{{ this.order.price }} CHF</B></span
+  >
 </mat-card>
 <button (click)="this.cancelOrder()" [routerLink]="['/order/']">
   Cancel Order
