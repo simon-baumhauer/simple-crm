@@ -22,7 +22,6 @@ export class DashboardComponent implements OnInit {
         console.log('after', this.allOrders);
         this.sumUp();
       });
-    console.log('all Orders in Dashboard:', this.allOrders);
   }
 
   sumUp() {
