@@ -3,7 +3,7 @@
     <tr>
       <th>Name</th>
       <th>Status</th>
-      <th>Amount</th>
+      <th>Sum</th>
     </tr>
     <tr
       *ngFor="let order of allOrders"
@@ -13,8 +13,8 @@
     >
       <td>{{ this.order.user }}</td>
       <td>
-        <span *ngIf="order.status == false">pending</span
-        ><span *ngIf="order.status == true">payed</span>
+        <span *ngIf="!order.status">pending</span
+        ><span *ngIf="order.status">paid</span>
       </td>
       <td>{{ this.order.price }} CHF</td>
     </tr>

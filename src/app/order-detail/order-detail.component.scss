@@ -1,10 +1,37 @@
 img {
-  width: 30px;
-  height: 30px;
+  width: 60px;
+  height: 60px;
 }
 
 .mat-card {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
+  align-items: center;
+}
+
+.btn-paid {
+  color: green !important;
+}
+
+.btn-cancel {
+  color: red !important;
+  margin-right: 16px;
+}
+
+.user-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.user-card {
+  margin-top: 100px;
+}
+
+.order-price {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
 }

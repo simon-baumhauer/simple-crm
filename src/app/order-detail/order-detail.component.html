@@ -13,13 +13,20 @@
     this.order.masken.length
   }}</mat-card
 >
-<mat-card>
+<mat-card class="user-card">
+  <img class="user-img" src="./assets/img/profile.png" alt="" />
   <span>{{ this.order.user }}</span>
-  <span>
+  <span class="order-price">
     Total amount: <B>{{ this.order.price }} CHF</B></span
   >
 </mat-card>
-<button (click)="this.cancelOrder()" [routerLink]="['/order/']">
+
+<button
+  (click)="this.cancelOrder()"
+  [routerLink]="['/order/']"
+  mat-raised-button
+  class="btn-cancel"
+>
   Cancel Order
 </button>
-<button (click)="payedOrder()">Payed</button>
+<button (click)="payedOrder()" class="btn-paid" mat-raised-button>Paid</button>
