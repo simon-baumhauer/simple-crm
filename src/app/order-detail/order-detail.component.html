@@ -1,3 +1,4 @@
+<h2>Products</h2>
 <mat-card
   ><img src="../assets/img/Handschuhe.webp" alt="" />{{
     this.order.handschuhe.length
@@ -13,10 +14,14 @@
     this.order.masken.length
   }}</mat-card
 >
+<h2>User/Order Information</h2>
 <mat-card class="user-card">
   <img class="user-img" src="./assets/img/profile.png" alt="" />
   <span>{{ this.order.user }}</span>
-  <span class="order-price">
+  <span
+    [class.order-price]="!order.status"
+    [class.order-price-paid]="order.status"
+  >
     Total amount: <B>{{ this.order.price }} CHF</B></span
   >
 </mat-card>

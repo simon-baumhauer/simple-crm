@@ -26,12 +26,19 @@ img {
   border-radius: 50%;
 }
 
-.user-card {
-  margin-top: 100px;
-}
-
 .order-price {
   width: 200px;
   display: flex;
   justify-content: space-between;
+  color: red;
+}
+.order-price-paid {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  color: green;
+}
+
+.color-red {
+  color: red;
 }
