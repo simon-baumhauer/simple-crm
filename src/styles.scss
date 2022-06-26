@@ -66,4 +66,14 @@ body {
 
 .background-color-green {
   background-color: rgb(90, 221, 90);
+  &:hover {
+    background-color: rgb(51, 129, 51);
+  }
+}
+
+.background-color-red {
+  background-color: rgb(231, 74, 74);
+  &:hover {
+    background-color: rgb(175, 54, 54);
+  }
 }

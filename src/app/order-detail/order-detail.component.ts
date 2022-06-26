@@ -27,6 +27,13 @@ export class OrderDetailComponent implements OnInit {
     });
   }
 
+  saveOrder() {
+    this.firestore
+      .collection('orders')
+      .doc(this.orderId)
+      .update(this.order.toJson());
+  }
+
   getOrder() {
     this.firestore
       .collection('orders')
@@ -43,6 +50,7 @@ export class OrderDetailComponent implements OnInit {
   }
 
   payedOrder() {
-    this.order.status == true;
+    this.order.status = true;
+    this.saveOrder();
   }
 }

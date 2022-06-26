@@ -14,10 +14,7 @@ mat-card {
   border-collapse: collapse;
   tr {
     border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-    background-color: rgb(231, 74, 74);
-    &:hover {
-      background-color: rgb(138, 39, 39);
-    }
+
     &:first-child {
       cursor: unset;
       background-color: white;
@@ -41,10 +38,6 @@ mat-card {
       &:first-child {
         padding-left: 16px;
       }
-    }
-
-    &:hover {
-      background-color: rgb(175, 54, 54);
     }
   }
 
