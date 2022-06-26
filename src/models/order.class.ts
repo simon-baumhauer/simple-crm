@@ -4,6 +4,7 @@ export class Order {
   masken: Array<any>;
   price: number;
   user: string;
+  status: boolean;
 
   constructor(obj?: any) {
     this.handschuhe = obj ? obj.handschuhe : [];
@@ -11,6 +12,7 @@ export class Order {
     this.masken = obj ? obj.masken : [];
     this.price = obj ? obj.price : '';
     this.user = obj ? obj.user : '';
+    this.status = obj ? obj.status : false;
   }
 
   public toJson() {
@@ -20,6 +22,7 @@ export class Order {
       masken: this.masken,
       price: this.price,
       user: this.user,
+      status: this.status,
     };
   }
 }

@@ -41,4 +41,8 @@ export class OrderDetailComponent implements OnInit {
   cancelOrder() {
     this.firestore.collection('orders').doc(this.orderId).delete();
   }
+
+  payedOrder() {
+    this.order.status == true;
+  }
 }
