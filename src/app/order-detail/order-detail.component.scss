@@ -30,12 +30,12 @@ img {
   width: 200px;
   display: flex;
   justify-content: space-between;
+}
+
+.order-price-peding {
   color: red;
 }
 .order-price-paid {
-  width: 200px;
-  display: flex;
-  justify-content: space-between;
   color: green;
 }
 

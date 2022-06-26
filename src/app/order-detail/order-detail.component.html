@@ -18,11 +18,13 @@
 <mat-card class="user-card">
   <img class="user-img" src="./assets/img/profile.png" alt="" />
   <span>{{ this.order.user }}</span>
-  <span
-    [class.order-price]="!order.status"
-    [class.order-price-paid]="order.status"
-  >
-    Total amount: <B>{{ this.order.price }} CHF</B></span
+  <span class="order-price">
+    Total amount:
+    <B
+      [class.order-price-peding]="!order.status"
+      [class.order-price-paid]="order.status"
+      >{{ this.order.price }} CHF</B
+    ></span
   >
 </mat-card>
 
