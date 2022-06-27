@@ -9,15 +9,18 @@
 </mat-card>
 
 <mat-card>Chart</mat-card>
-<mat-card class="sales-number">
-  <span>All Sales: </span>
-  <span>{{ this.finalSumOfAllOrders }} CHF</span>
-</mat-card>
-<mat-card class="sales-number">
-  <span>All pending Orders: </span>
-  <span>{{ this.finalSumOfAllPedingOrders }} CHF</span>
-</mat-card>
-<mat-card class="sales-number">
-  <span>All paid Orders</span>
-  <span>{{ this.finalSumOfAllPayedOrders }} CHF</span>
+<mat-card>
+  <h2>Sales Numbers</h2>
+  <mat-card class="sales-number">
+    <span>All Sales: </span>
+    <span>{{ this.finalSumOfAllOrders }} CHF</span>
+  </mat-card>
+  <mat-card class="sales-number">
+    <span>All pending Orders: </span>
+    <span>{{ this.finalSumOfAllPedingOrders }} CHF</span>
+  </mat-card>
+  <mat-card class="sales-number">
+    <span>All payed Orders</span>
+    <span>{{ this.finalSumOfAllPayedOrders }} CHF</span>
+  </mat-card>
 </mat-card>

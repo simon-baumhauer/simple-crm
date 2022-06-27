@@ -1,5 +1,11 @@
 <mat-drawer-container class="mat-drawer-container" autosize>
-  <mat-drawer [opened]="false" #drawer class="sidenav" mode="side">
+  <mat-drawer
+    [mode]="mobileQuery.matches ? 'over' : 'side'"
+    [opened]="mobileQuery.matches ? 'false' : 'true'"
+    #drawer
+    class="sidenav"
+    mode="side"
+  >
     <div class="logo-container">
       <img class="logo" src="assets/img/logo.png" alt="" />
     </div>
