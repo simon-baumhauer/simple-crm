@@ -10,8 +10,10 @@ export class DashboardComponent implements OnInit {
   order = new Order();
   allOrders = [];
   allPedingOrders = [];
+  allPayedOrders = [];
   finalSumOfAllOrders = 0;
   finalSumOfAllPedingOrders = 0;
+  finalSumOfAllPayedOrders = 0;
   constructor(private firestore: AngularFirestore) {}
 
   ngOnInit(): void {
@@ -23,6 +25,7 @@ export class DashboardComponent implements OnInit {
 
         this.sumUpAllOrders();
         this.sumUpAllPedingOrders();
+        this.sumUpAllPayedOrders();
       });
   }
 
@@ -43,6 +46,19 @@ export class DashboardComponent implements OnInit {
       this.finalSumOfAllPedingOrders =
         this.finalSumOfAllPedingOrders + element.price;
       console.log('finalSumOfAllPedingOrders:', this.finalSumOfAllPedingOrders);
+    }
+  }
+
+  sumUpAllPayedOrders() {
+    this.allPayedOrders = this.allOrders.filter(
+      (order) => order.status === true
+    );
+    console.log(this.allPayedOrders);
+    for (let i = 0; i < this.allPayedOrders.length; i++) {
+      const element = this.allPayedOrders[i];
+      this.finalSumOfAllPayedOrders =
+        this.finalSumOfAllPayedOrders + element.price;
+      console.log('finalSumOfAllPedingOrders:', this.finalSumOfAllPayedOrders);
     }
   }
 }
