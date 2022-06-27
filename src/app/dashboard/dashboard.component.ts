@@ -9,7 +9,9 @@ import { Order } from 'src/models/order.class';
 export class DashboardComponent implements OnInit {
   order = new Order();
   allOrders = [];
-  finalSum = 0;
+  allPedingOrders = [];
+  finalSumOfAllOrders = 0;
+  finalSumOfAllPedingOrders = 0;
   constructor(private firestore: AngularFirestore) {}
 
   ngOnInit(): void {
@@ -17,18 +19,30 @@ export class DashboardComponent implements OnInit {
       .collection('orders')
       .valueChanges({ idField: 'customIdName' })
       .subscribe((changes: any) => {
-        console.log('Receive changes from DB', changes);
         this.allOrders = changes;
-        console.log('after', this.allOrders);
-        this.sumUp();
+
+        this.sumUpAllOrders();
+        this.sumUpAllPedingOrders();
       });
   }
 
-  sumUp() {
+  sumUpAllOrders() {
     for (let i = 0; i < this.allOrders.length; i++) {
       const element = this.allOrders[i];
-      this.finalSum = this.finalSum + element.price;
-      console.log(this.finalSum);
+      this.finalSumOfAllOrders = this.finalSumOfAllOrders + element.price;
+      console.log(this.finalSumOfAllOrders);
+    }
+  }
+
+  sumUpAllPedingOrders() {
+    this.allPedingOrders = this.allOrders.filter(
+      (order) => order.status === false
+    );
+    for (let i = 0; i < this.allPedingOrders.length; i++) {
+      const element = this.allPedingOrders[i];
+      this.finalSumOfAllPedingOrders =
+        this.finalSumOfAllPedingOrders + element.price;
+      console.log('finalSumOfAllPedingOrders:', this.finalSumOfAllPedingOrders);
     }
   }
 }
