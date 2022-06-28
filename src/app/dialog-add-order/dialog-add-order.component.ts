@@ -12,7 +12,8 @@ import { FormControl } from '@angular/forms';
 export class DialogAddOrderComponent implements OnInit {
   order = new Order();
   loading = false;
-  selectedUser = new FormControl('');
+
+  selectedUser = 'option2';
   finalSum: number = 0;
 
   constructor(
@@ -33,7 +34,7 @@ export class DialogAddOrderComponent implements OnInit {
 
   saveOrder() {
     this.loading = true;
-    this.order.user = this.selectedUser.value;
+    this.order.user = this.selectedUser;
     this.order.price = this.finalSum;
     this.firestore
       .collection('orders')
@@ -43,7 +44,7 @@ export class DialogAddOrderComponent implements OnInit {
         console.log('Adding user finished', results);
         this.dialogRef.close();
       });
-    console.log('selected User:', this.selectedUser.value);
+    console.log('selected User:', this.selectedUser);
   }
 
   deleteOrder() {
