@@ -36,5 +36,23 @@ img {
 }
 
 .product-amount {
-  font-weight: 400;
+  font-weight: 700;
+}
+
+.btn-container {
+  display: flex;
+  margin-right: 50px;
+  button {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.last-column {
+  display: flex;
+  align-items: center;
 }
