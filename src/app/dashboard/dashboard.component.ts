@@ -29,15 +29,15 @@ export class DashboardComponent implements OnInit {
       });
   }
 
-  sumUpAllOrders() {
+  sumUpAllOrders = () => {
     for (let i = 0; i < this.allOrders.length; i++) {
       const element = this.allOrders[i];
       this.finalSumOfAllOrders = this.finalSumOfAllOrders + element.price;
       console.log(this.finalSumOfAllOrders);
     }
-  }
+  };
 
-  sumUpAllPedingOrders() {
+  sumUpAllPedingOrders = () => {
     this.allPedingOrders = this.allOrders.filter(
       (order) => order.status === false
     );
@@ -47,9 +47,9 @@ export class DashboardComponent implements OnInit {
         this.finalSumOfAllPedingOrders + element.price;
       console.log('finalSumOfAllPedingOrders:', this.finalSumOfAllPedingOrders);
     }
-  }
+  };
 
-  sumUpAllPayedOrders() {
+  sumUpAllPayedOrders = () => {
     this.allPayedOrders = this.allOrders.filter(
       (order) => order.status === true
     );
@@ -60,5 +60,5 @@ export class DashboardComponent implements OnInit {
         this.finalSumOfAllPayedOrders + element.price;
       console.log('finalSumOfAllPedingOrders:', this.finalSumOfAllPayedOrders);
     }
-  }
+  };
 }

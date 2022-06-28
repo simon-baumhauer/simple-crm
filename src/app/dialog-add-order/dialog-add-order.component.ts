@@ -55,4 +55,8 @@ export class DialogAddOrderComponent implements OnInit {
     array.push(produkt);
     this.finalSum = this.finalSum + sum;
   }
+
+  deleteProduct = (array) => {
+    array.pop();
+  };
 }

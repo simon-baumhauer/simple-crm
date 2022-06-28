@@ -2,29 +2,36 @@
   <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
   <h1 mat-dialog-title>Add Order</h1>
   <div class="grid">
-    <mat-card
-      class="products"
-      (click)="selectProduct('Handschuhe', this.order.handschuhe, 3)"
+    <mat-card class="products"
       ><img src="../assets/img/Handschuhe.webp" alt="" /><span>Handschuhe</span>
+      <button (click)="deleteProduct(this.order.handschuhe)">delete</button>
+      <button (click)="selectProduct('Handschuhe', this.order.handschuhe, 3)">
+        plus
+      </button>
       <span class="product-amount"
         >{{ this.order.handschuhe.length }} pcs
       </span></mat-card
     >
-    <mat-card
-      class="products"
-      (click)="selectProduct('Masken', this.order.masken, 6)"
+    <mat-card class="products"
       ><img src="../assets/img/Masken.webp" alt="" /> <span>Masken</span>
+      <button (click)="deleteProduct(this.order.handschuhe)">delete</button>
+      <button (click)="selectProduct('Masken', this.order.masken, 6)">
+        plus
+      </button>
       <span class="product-amount">{{ this.order.masken.length }} pcs </span>
     </mat-card>
-    <mat-card
-      class="products"
-      (click)="
-        selectProduct('Desinfektionmittel', this.order.desinfektionsmittel, 5)
-      "
-    >
+    <mat-card class="products">
       <img src="../assets/img/Desinfektionsmittel.webp" alt="" /><span
         >Desinfektionmittel</span
       >
+      <button (click)="deleteProduct(this.order.handschuhe)">delete</button>
+      <button
+        (click)="
+          selectProduct('Desinfektionmittel', this.order.desinfektionsmittel, 5)
+        "
+      >
+        plus
+      </button>
       <span class="product-amount"
         >{{ this.order.desinfektionsmittel.length }} pcs
       </span>
