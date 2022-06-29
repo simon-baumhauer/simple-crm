@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Order } from 'src/models/order.class';
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -14,6 +15,7 @@ export class DashboardComponent implements OnInit {
   finalSumOfAllOrders = 0;
   finalSumOfAllPedingOrders = 0;
   finalSumOfAllPayedOrders = 0;
+
   constructor(private firestore: AngularFirestore) {}
 
   ngOnInit(): void {
